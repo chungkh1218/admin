@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+        
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel='stylesheet' href='js/lib/fullcalendar.min.css' />
+        <script src='js/lib/jquery.min.js'></script>
+        <script src='js/lib/moment.min.js'></script>
+        <script src='js/lib/fullcalendar.js'></script>
+        
+        <script src='./js/lib/index.js'></script>
+        
+
+
+
+</head> 
+<body>
+    <div id="landing">
+    <div class="filter">
+        <div id='searchheader'>Search Schedules</div>
+    <form action="" method="get" id="en_form"> 
+        <div class="filter">
+        <label>Schedule Types</label>
+             <select id = "scheduletype" name="scheduletype" >
+                <option value = "Cleaning Schedule">Cleaning Schedule</option>
+                <option value = "CL Booked Schedule">CL Booked Schedule</option>
+                <option value = "CL Availability">CL Availability </option>
+             </select>
+        </div>
+        <div class='filter hide' id="requestid">
+        <label>Request ID</label>
+        <input type="text" id="requestidnum" name="requestidnum">
+        </div >
+        <div class="filter hide" id="customerphone" >
+        <label>Customer Phone</label>
+        <input type="text" id="customerphonenum" name="customerphonenum">
+        </div>
+        <div class="filter hide" id="orderstatus">
+        <label>Order Status</label>
+        <select id = "orderstatus" name="orderstatus">
+           <option value = "Pending">Pending</option>
+           <option value = "Assigned">Assigned</option>
+           <option value = "Used">Used</option>
+           <option value = "Cancelled">Cancelled</option>
+        </select>
+    </div>
+    <div class="filter">
+        <label>Supplier ID</label>
+        <input type="text" name="supplierid">
+    </div>
+    <div class="filter">
+        <label>Supplier Phone</label>
+        <input type="text" name='supplierphone'>
+    </div>
+    <div class="filter">
+        <label>District</label>
+        <select id = "District" >
+           <option value = "Pending">Pending</option>
+           <option value = "Assigned">Assigned</option>
+           <option value = "Used">Used</option>
+           <option value = "Cancelled">Cancelled</option>
+        </select>
+    </div>
+    <div class="filter">
+        <label>Category ID</label>
+        <select id = "categoryid" name="categoryid">
+                <option value = "HCBS">HCBS</option>
+                <option value = "HOCD">HOCD</option>
+                <option value = "HOHO">HOHO</option>
+                <option value = "HCHOO">HCHOO</option>
+                <option value = "HCUN">HCUN</option> 
+                <option value = "HCMI">HCMI</option> 
+             </select>
+            </div>
+            <button id="submit" type="submit">Submit</button>  
+    </form>
+    <div>
+    
+    </div>
+</div>
+   <div id="testing" ></div>
+    <div id="calendar"></div>
+</div>
+</body>
+</html>
