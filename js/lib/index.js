@@ -17,16 +17,29 @@
          $(element).popover({
              title: itemtitle,
              content: itemcontent,
+             animation:true,
              trigger:'hover',
              container:'body',
              placement:'top'
          })
+         
   },
+    eventRender: function(event,element){
+        $('#loader').hide()
+    },
+    
+    eventClick: function(event){
+        if (event.url){
+            window.open('./detailpage.html');
+            return false
+        }
+    },
      eventSources:[
            {
            url: 'https://cors-anywhere.herokuapp.com/'+'http://test.hellotoby.com:8889/api/admin/schedule',
            type:"GET",
            data:{},
+            
         error: function() {
           $('#script-warning').show();
         },
