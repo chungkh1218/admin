@@ -17,13 +17,13 @@
 </head> 
 <body>
     <div id="testing">
-        <button class="btn btn-primary btn-sm">+</button>
+        <button class="btn btn-primary btn-sm" id="addevent">+</button>
         <button class="btn btn-primary btn-sm">Batch</button>
         <button class="btn btn-primary btn-sm" ><a href="./index.html">Home</a></button>
     </div>
     <div id="landing">
     <div class="filter">
-        <div id='searchheader'>Search Schedules</div>
+        <div id='searchheader'><h5>Search Schedules</h5></div>
     <form action="" method="get" id="en_form"> 
         <div class="filter">
         <label>Schedule Types</label>
@@ -78,16 +78,52 @@
                 <option value = "HCMI">HCMI</option> 
              </select>
             </div>
-            <button id="submit" type="submit">Submit</button> 
+            <button id="submit" type="submit" class="btn btn-info">Submit</button> 
             <div class="loader"></div>
             
     </form>
   
-    <div>
+    <div id="detailprojectid">
     
     </div>
 </div>
    <div id="calendar"></div>
+   <div id="createEventModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span> <span class="sr-only">close</span></button>
+                    <h4>Add an Event</h4>
+                </div>
+                <div id="modalBody" class="modal-body">
+                   <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Event Name" id="eventName">
+                    </div>
+                    <div class="form-group form-inline">
+                        <div class="input-group date" data-provide="datepicker">
+                            <input type="text" id="eventDueDate" class="form-control" placeholder="Due Date mm/dd/yyyy">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <input class="form-control" type="text" placeholder="supplier phone number" id="supplierPhone">
+                        </div>
+                        <div class="form-group">
+                                <input class="form-control" type="text" placeholder="supplier name" id="supplierName">
+                            </div>
+                    <div class="form-group">
+                        <textarea class="form-control" type="text" rows="4" placeholder="comment" id= "comment"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                    <button type="submit" class="btn btn-primary" id="submitButton">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
  
 </div>
 
